@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="public/css/style.css" />
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+	<p>
+		Hello, {{.Name}}
+	</p>
+	<div id="QRCode">
+		<img width="200" height="200" src="data:image/png;base64,{{.Base64png}}" />
+	</div>
+	<div id="app">
+	{[ message ]}
+	</div>
+	<!--ul>
+		{{range .Data}}
+			<li>
+				{{.Username}}
+			</li>
+		{{end}}
+	</ul-->
+	
+	<script type="text/javascript">
+
+	var app = new Vue({
+	delimiters: ['{[', ']}'],
+	el: '#app',
+	data: {
+    message: 'Hello Vue!'
+  }
+})
+	</script>
+	
+</body>
+</html>
